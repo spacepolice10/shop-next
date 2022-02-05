@@ -1,0 +1,1 @@
+// just a div with a message about some kind of sale
