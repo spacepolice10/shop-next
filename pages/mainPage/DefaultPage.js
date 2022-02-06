@@ -1,13 +1,16 @@
 import { useState } from 'react';
-import React from 'react';
 import testData from '../testData';
-import Item from '../itemsList/Item';
+import SaleBanner from './banners/SaleBanner';
+import SeasonBanner from './banners/SeasonBanner';
+import ItemsList from '../itemsList/ItemsList';
 
 export default function DefaultPage() {
 	const items = testData.items.clothes;
 	return (
 		<div>
-			{ React.Children.toArray(items.map(item => <Item {...item} />)) }
+			<SaleBanner />
+			<SeasonBanner />
+			<ItemsList items={items} />
 		</div>
 	)
 }
