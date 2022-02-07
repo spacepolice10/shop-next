@@ -2,6 +2,7 @@ const testData = {
 	items: {
 		clothes: [
 			{
+				id: 2020,
 				name: 'Jacket',
 				price: 1200,
 				size: 'XS',
@@ -12,6 +13,7 @@ const testData = {
 				badge: 'Hot',
 			},
 			{
+				id: 4040,
 				name: 'Shoes',
 				price: 700,
 				size: 'S',

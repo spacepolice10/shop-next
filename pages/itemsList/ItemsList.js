@@ -9,6 +9,7 @@ const itemsList = ({items}) => {
 			.items-list {
 				display: grid;
 				grid-template-columns: repeat(2, 2fr);
+				width: 100%;
 			}
 		`} </style>
 		</div>
