@@ -1,21 +1,39 @@
 import { useState } from 'react';
 import testData from '../../testData';
 
-function Searching () {
-    const [query, setQuery] = useState('')
+function Searching ({query, setQuery, setTips}) {
     const searchProcess = (event) => {
         setQuery(event.target.value)
-        console.log(query)
+        setTips(Object.values(testData.items).flat().filter(x => {
+            return x.name.toUpperCase().includes(query.toUpperCase())
+        }))
     }
     return (
         <input value={query} onChange={searchProcess} type="text" />
     )
 }
 
-export default function SearchBar () {
+function Tips ({tips}) {
     return (
         <div>
-            <Searching />
+            {tips && tips.map(
+                tip => tip.name
+            )}
+        </div>
+    )
+}
+
+export default function SearchBar () {
+    const [query, setQuery] = useState('')
+    const [tips, setTips] = useState(null)
+    return (
+        <div>
+            <Searching 
+            query={query} 
+            setQuery={setQuery} 
+            setTips={setTips}
+            />
+            <Tips tips={tips} />
         </div>
     )
 }

@@ -50,8 +50,24 @@ const testData = {
 		]
 	},
 	lists: {
-		popular: [],
-		mine: [],
+		popular: [
+			{
+				name: 'Classic punk-rock-style',
+				subscribers: [],
+				clothes: [
+					1992, 6060
+				],
+			}
+		],
+		mine: [
+			{
+				name: 'Best Naruto-style outfit',
+				subscribers: [],
+				clothes: [
+					4040
+				]
+			}
+		],
 		subscriptions: [],
 	},
 	categories: [
@@ -61,7 +77,14 @@ const testData = {
 			query: ''
 		}
 	],
-	blog: {},
+	blog: [
+		{
+			title: 'Dress up like captain Levi',
+			image: '',
+			paragraph: 'Let us talk about how we can achieve the same amount of sus that captain Levi sports permanently',
+			content: 'You know what? Everyone likes Levi. He is extremely cool when we speak about his abilities in crushing titans but we also have to admit that he is quite stylish.'
+		}
+	],
 }
 
 export default testData;
