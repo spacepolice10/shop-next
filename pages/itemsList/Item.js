@@ -2,7 +2,7 @@ import A from '/components/A';
 
 const Item = (props) => {
 	return (
-			<div className = 'item'>
+		<div className = 'item'>
 			<A text='' href={`/item/${props.id}`}>
 				<div>
 					<p>{props.name}</p>
@@ -10,16 +10,13 @@ const Item = (props) => {
 					<p>{props.size}</p>
 					<p>{props.color}</p>
 				</div>
-				</A>
-					<p>h</p>
-
-				<style jsx> {`
-					.item {
-						border: 2px solid black;
-					}
-				`} </style>
-			</div>
-
+			</A>
+			<style jsx> {`
+				.item {
+					border: 2px solid black;
+				}
+			`} </style>
+		</div>
 	)
 }
 

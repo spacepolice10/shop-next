@@ -10,7 +10,7 @@ const Index = () => {
 				.container {
 					width: 100%;
 				}
-			`} </style>
+			`} </style> 
 		</div>
 	)
 }
