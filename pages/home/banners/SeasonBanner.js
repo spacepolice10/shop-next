@@ -1,4 +1,4 @@
-import Banner from '../../../components/Banner';
+import Banner from '../../search/categories/CategoryBanner';
 const SeasonBanner = () => {
 	return (
 		<Banner>

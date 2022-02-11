@@ -1,7 +1,4 @@
 import { useState } from 'react';
-import testData from '../testData';
-import SaleBanner from './banners/SaleBanner';
-import SeasonBanner from './banners/SeasonBanner';
 import HomePage from './HomePage';
 import Blog from '../blog/Blog';
 
@@ -22,8 +19,6 @@ export default function Home() {
 	return (
 		<>
 			<ScreenPicker setScreen={setScreen} />
-			<SaleBanner />
-			<SeasonBanner />
 			{screen}
 		</>
 	)

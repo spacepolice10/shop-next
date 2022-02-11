@@ -1,4 +1,4 @@
-const Banner = (props) => {
+const CategoryBanner = (props) => {
 	return (
 		<div className = 'testClass'>
 			{props.children}
@@ -12,4 +12,4 @@ const Banner = (props) => {
 	)
 }
 
-export default Banner;
+export default CategoryBanner;

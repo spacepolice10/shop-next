@@ -1,5 +1,5 @@
 import React from 'react';
-import Banner from '../../components/Banner';
+import CategoryBanner from './categories/CategoryBanner';
 import A from '../../components/A';
 import testData from '../testData';
 
@@ -13,9 +13,9 @@ export default function Categories () {
 					<>
 						<A href={`/search/categories/${category.name}`}>
 							<div>
-								<Banner>
+								<CategoryBanner>
 									<h1>{ category.name }</h1>
-								</Banner>
+								</CategoryBanner>
 							</div>
 						</A>
 					</>
