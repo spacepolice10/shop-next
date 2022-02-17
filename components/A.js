@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 function A (props) {
 	return (
-		<Link href={props.href}>
+		<Link href={ props.href }>
 			{ props.children }
 		</Link>
 	)

@@ -1,12 +1,13 @@
 import A from './A';
+import Link from 'next/link';
 
 const MenuBar = () => {
 	return (
 		<div className = 'menu-bar'>
-				<A href='/home/'>Home</A>
-				<A href='/search/'>Search</A>
-				<A href='/lists/'>Lists</A>
-				<A href='/profile/'>Me</A>
+				<Link href='/home/'>Home</Link>
+				<Link href='/search/'>Search</Link>
+				<Link href='/lists/'>Lists</Link>
+				<Link href='/profile/'>Me</Link>
 			<style jsx> {`
 				.menu-bar {
 					position: fixed;
