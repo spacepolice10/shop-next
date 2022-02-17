@@ -23,7 +23,7 @@ const testData = {
 				description: 'Some text about this awesome jacket from nowhere, bla-bla-bla',
 				comments: [],
 				score: 4.4,
-				badge: 'Hot',
+				badge: 'Season',
 			},
 			{
 				id: 4040,
@@ -34,7 +34,7 @@ const testData = {
 				description: 'Shoes,shoes,shoes,shoes',
 				comments: [],
 				score: 3.9,
-				badge: 'Season',
+				badge: 'Hot',
 			},
 			{
 				id: 6060,
