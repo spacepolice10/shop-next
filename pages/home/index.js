@@ -11,12 +11,25 @@ function ScreenPicker ({ setScreen }) {
 	)
 }
 
-export default function Home() {
+export default function Home({ data }) {
+	console.log(data)
 	const [screen, setScreen] = useState(<HomePage />)
 	return (
 		<>
 			<ScreenPicker setScreen={setScreen} />
 			{screen}
+			{/* {data.map(x => x)} */}
 		</>
 	)
+}
+
+
+export async function getServerSideProps( ) {
+	const res = await fetch('http://localhost:8080/api/user', {
+		mode: 'no-cors'
+	})
+    const data = await res.json();
+	return {
+		props: { data }, 
+	}
 }

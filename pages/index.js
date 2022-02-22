@@ -1,7 +1,7 @@
 import Home from './home/index';
 import A from '../components/A';
 
-const Index = () => {
+const Index = ({ data }) => {
 	return (
 		<div className = 'container'>
 			<h1>Testing</h1>

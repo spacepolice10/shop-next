@@ -4,7 +4,7 @@ const Item = (props) => {
 	return (
 		<div className = 'item'>
 			<A text='' href={`/item/${props.id}`}>
-				<div>
+				<div> 
 					<p>{props.name}</p>
 					<p>{props.price}</p>
 					<p>{props.size}</p>
