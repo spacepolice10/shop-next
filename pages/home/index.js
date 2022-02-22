@@ -23,7 +23,7 @@ export default function Home({ data }) {
 
 export async function getServerSideProps() {
 	const res = await fetch('http://localhost:5000/api/item/?badgeId=1')
-    const data = await res.json()
+	const data = await res.json()
 	return {
 		props: { data }, 
 	}

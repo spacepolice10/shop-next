@@ -1,5 +1,6 @@
 import A from '/components/A';
 import Image from 'next/image';
+import Badge from '../../components/Badge';
 
 const Item = (props) => {
 	return (
@@ -8,8 +9,7 @@ const Item = (props) => {
 				<div> 
 					<p>{props.name}</p>
 					<p>{props.price}</p>
-					<p>{props.size}</p>
-					<p>{props.color}</p>
+					<Badge id={props.badgeId} />
 					<div className = 'picture'>
 						<Image
 							alt={props.name}
@@ -37,3 +37,5 @@ const Item = (props) => {
 }
 
 export default Item;
+
+
