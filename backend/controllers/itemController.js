@@ -6,9 +6,9 @@ class ItemController {
     async create(req, res) {
         try {
             let { name, price, description, brandId, categoryId, colorId, sizeId, badgeId } = req.body
-            const { img } = req.files
-            let fileName = uuid.v4() + ".png"
-            img.mv(path.resolve(__dirname, '..', 'static', fileName))
+            const { image } = req.files
+            let fileName = uuid.v4() + ".jpg"
+            image.mv(path.resolve(__dirname, '..', '..', 'public', fileName))
             const item = await Item.create({
                 name, 
                 price, 
@@ -18,9 +18,9 @@ class ItemController {
                 colorId,
                 sizeId,
                 badgeId,
-                imgage: fileName
+                image: fileName
             })
-            return res.json(item)
+            return res.json(item.rows)
         } catch (e) {
             console.log(e)
         }
@@ -49,6 +49,8 @@ class ItemController {
         if (!categoryId && !brandId && !colorId && !sizeId && badgeId) {
             items = await Item.findAndCountAll({where: {badgeId}, limit, offset})
         }
-        return res.json(items)
+        return res.json(items.rows)
     }
 }
+
+module.exports = new ItemController()
