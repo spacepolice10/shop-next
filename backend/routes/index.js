@@ -8,7 +8,7 @@ const colorRouter = require('./colorRouter')
 const sizeRouter = require('./sizeRouter')
 const badgeRouter = require('./badgeRouter')
 
-// router.use('/item', itemRouter)
+router.use('/item', itemRouter)
 // router.use('/user', userRouter)
 router.use('/brand', brandRouter)
 router.use('/category', categoryRouter)
