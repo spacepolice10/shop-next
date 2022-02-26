@@ -1,6 +1,17 @@
+:root {
+    --black: #111728;
+    --white: #FFFF;
+    --grey-hard: #64748b;
+    --grey: #cbd5e1;
+    --teal-hard: #10B981;
+    --teal: #A7F3D0;
+    --red-hard: #FF0F2A;
+    --red: #FFC6C7;
+    --blue-hard: #0EA5E9;
+    --blue: #BAE6FD;
+}
 body {
     font-family: sans-serif;
-    width: 100%;
 }
 a {
     text-decoration: none;
