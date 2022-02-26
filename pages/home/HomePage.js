@@ -1,5 +1,5 @@
 import ItemsList from '../itemsList/ItemsList';
-import Banner from './Banner';
+import Banners from './Banners';
 import testData from '../testData';
 
 export default function HomePage ({ items }) {
@@ -9,8 +9,13 @@ export default function HomePage ({ items }) {
     ]
     return (
         <div>
-            <Banner content={banners}  />
-            <ItemsList items={clothes} badges={items.badges} />
+            {/* <Banners content={banners} /> */}
+            <ItemsList items={clothes} />
+            <style jsx>{`
+                div {
+                    width: 85%;
+                }
+            `}</style>
         </div>
     )
 }

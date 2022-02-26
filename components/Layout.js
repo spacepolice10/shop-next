@@ -12,6 +12,7 @@ export default function Layout ({ children }) {
 					justify-content: center;
 					align-items: center;
 					width: 100%
+
 				}
 			`} </style>
 		</div>

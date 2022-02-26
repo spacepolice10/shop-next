@@ -1,35 +1,89 @@
 import A from '/components/A';
 import Image from 'next/image';
 import Badge from '../../components/Badge';
+import SizesTag from '../../components/SizesTag';
+import ToCartButton from '../../components/ToCartButton';
+import ToListButton from '../../components/ToListButton';
 
 const Item = (props) => {
 	return (
 		<div className = 'item'>
 			<A text='' href={`/item/${props.id}`}>
 				<div> 
-					<p>{props.name}</p>
-					<p>{props.price}</p>
-					<Badge id={props.badgeId} />
-					<div className = 'picture'>
+					<div className="picture">
 						<Image
 							alt={props.name}
 							src={'/' + props.image}
-							width='120px'
-							height='60px'
-							layout="intrinsic"
+							width="100%"
+							height="50%"
+							layout="responsive"
 							objectFit="cover"
 							quality={100}
 						/>
 					</div>
+					<div className='name-price'>
+						<p className='name'>{props.name}</p>
+						<p className='price'>$ {props.price}</p>
+					</div>
+					<div className='divider'></div>
+					<div className='badge-sizes'>
+						<Badge id={props.badgeId} />
+						<SizesTag id={props.sizeId} />
+					</div>
+					<div className='to-cart-to-list'>
+						<ToCartButton />
+						<ToListButton />
+					</div>
+					<p className='description'>Free shipping for everyone</p>
 				</div>
 			</A>
 			<style jsx> {`
 				.item {
-					border: 2px solid black;
+					display: flex;
+					flex-direction: column;
+					border-radius: 10px;
+					margin: 2px;
+					box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+					box-sizing: border-box;
+					overflow: hidden;
 				}
-				.picture {
-					width: 120px;
-					height: 60px;
+				.name-price {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					margin: 4px;
+				}
+				.name {
+					font-weight: bold;
+					font-size: 30px;
+				}
+				.price {
+					font-weigth: bold;
+					font-size: 24px;
+					color: #64748b;
+				}
+				.divider {
+					margin: 0px 20px;
+					height: 1px;
+					background-color: black;
+					opacity: 20%;
+				}
+				.badge-sizes {
+					display: flex;
+					justify-content: flex-start;
+					gap: 20px;
+					padding: 10px;
+				}
+				.to-cart-to-list {
+					display: flex;
+					justify-content: center;
+					gap: 10px;
+					align-items: center;
+					padding: 10px;
+				}
+				.description {
+					padding: 10px;
+					color: #64748b;
 				}
 			`} </style>
 		</div>

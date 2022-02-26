@@ -8,7 +8,8 @@ const itemsList = ({items}) => {
 		<style jsx> {`
 			.items-list {
 				display: grid;
-				grid-template-columns: repeat(2, 2fr);
+				grid-template-columns: repeat(1, 2fr);
+				gap: 40px;
 				width: 100%;
 			}
 		`} </style>

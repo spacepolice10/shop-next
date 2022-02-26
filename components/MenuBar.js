@@ -14,8 +14,12 @@ const MenuBar = () => {
 					bottom: 0;
 					display: flex;
 					justify-content: space-evenly;
-					border: 2px solid black;
-					width: 95%;
+					align-items: center;
+					z-index: 1000;
+					background: black;
+					color: white;
+					width: 100%;
+					height: 80px;
 				}
 			`} </style>
 		</div>

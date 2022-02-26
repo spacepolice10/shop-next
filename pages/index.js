@@ -1,5 +1,4 @@
 import Home from './home/index';
-import A from '../components/A';
 
 const Index = ({ data }) => {
 	return (
