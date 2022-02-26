@@ -48,6 +48,13 @@ const MenuBar = () => {
 					width: 30px;
 					height: 30px;
 				}
+				@media (min-width: 668px) {
+					.menu-bar {
+						position: relative;
+						width: 60%;
+						border-radius: 20px;
+					}
+				}
 			`} </style>
 		</div>
 	)
