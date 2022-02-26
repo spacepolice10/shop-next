@@ -51,6 +51,11 @@ class ItemController {
         }
         return res.json(items.rows)
     }
+    async getOne(req, res) {
+        const { id } = req.params
+        const item = await Item.findOne({where: { id }})
+        return res.json(item)
+    }
 }
 
 module.exports = new ItemController()
