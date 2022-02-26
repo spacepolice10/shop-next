@@ -1,5 +1,6 @@
-import A from '/components/A';
+
 import Image from 'next/image';
+import Link from 'next/link';
 import Badge from '../../components/Badge';
 import SizesTag from '../../components/SizesTag';
 import ToCartButton from '../../components/ToCartButton';
@@ -8,36 +9,41 @@ import ToListButton from '../../components/ToListButton';
 const Item = (props) => {
 	return (
 		<div className = 'item'>
-			<A text='' href={`/item/${props.id}`}>
 				<div> 
-					<div className="picture">
-						<Image
-							alt={props.name}
-							src={'/' + props.image}
-							width="100%"
-							height="50%"
-							layout="responsive"
-							objectFit="cover"
-							quality={100}
-						/>
-					</div>
-					<div className='name-price'>
-						<p className='name'>{props.name}</p>
-						<p className='price'>$ {props.price}</p>
-					</div>
-					<div className='divider'></div>
-					<div className='badge-sizes'>
-						<Badge id={props.badgeId} />
-						<SizesTag id={props.sizeId} />
-					</div>
+					<Link href={`/item/${props.id}`}>
+						<span className='link'>
+						<div className="picture">
+							<Image
+								alt={props.name}
+								src={'/' + props.image}
+								width="100%"
+								height="50%"
+								layout="responsive"
+								objectFit="cover"
+								quality={100}
+								/>
+						</div>
+						<div className='name-price'>
+							<p className='name'>{props.name}</p>
+							<p className='price'>$ {props.price}</p>
+						</div>
+						<div className='divider'></div>
+						<div className='badge-sizes'>
+							<Badge id={props.badgeId} />
+							<SizesTag id={props.sizeId} />
+						</div>
+						</span>
+					</Link>
 					<div className='to-cart-to-list'>
 						<ToCartButton />
 						<ToListButton />
 					</div>
 					<p className='description'>Free shipping for everyone</p>
 				</div>
-			</A>
 			<style jsx> {`
+				.link {
+					cursor: pointer;
+				}
 				.item {
 					display: flex;
 					flex-direction: column;
@@ -51,11 +57,12 @@ const Item = (props) => {
 					display: flex;
 					justify-content: space-between;
 					align-items: center;
-					margin: 4px;
+					margin: 0px 10px;
 				}
 				.name {
 					font-weight: bold;
 					font-size: 30px;
+					color: var(--black);
 				}
 				.price {
 					font-weigth: bold;

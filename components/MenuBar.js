@@ -1,13 +1,32 @@
-import A from './A';
 import Link from 'next/link';
+import HomeIcon from './icons/HomeIcon';
+import SearchIcon from './icons/SearchIcon';
+import HeartIcon from './icons/HeartIcon';
+import UserIcon from './icons/UserIcon';
 
 const MenuBar = () => {
 	return (
 		<div className = 'menu-bar'>
-				<Link href='/home/'>Home</Link>
-				<Link href='/search/'>Search</Link>
-				<Link href='/lists/'>Lists</Link>
-				<Link href='/profile/'>Me</Link>
+				<Link href='/home/'>
+					<button>
+						<HomeIcon />
+					</button>
+				</Link>
+				<Link href='/search/'>
+					<button>
+						<SearchIcon />
+					</button>
+				</Link>
+				<Link href='/lists/'>
+					<button>
+						<HeartIcon />
+					</button>
+				</Link>
+				<Link href='/profile/'>
+					<button>
+						<UserIcon />
+					</button>
+				</Link>
 			<style jsx> {`
 				.menu-bar {
 					position: fixed;
@@ -16,10 +35,15 @@ const MenuBar = () => {
 					justify-content: space-evenly;
 					align-items: center;
 					z-index: 1000;
-					background: black;
-					color: white;
+					background: var(--black);
+					color: var(--white);
 					width: 100%;
 					height: 80px;
+				}
+				button {
+					border: none;
+					background: transparent;
+					cursor: pointer;
 				}
 			`} </style>
 		</div>

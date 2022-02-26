@@ -5,8 +5,8 @@ export default function ToCartButton ({ id }) {
             <p>Add to cart</p>
             <style jsx> {`
                 div {
-                    color: white;
-                    background-color: black;
+                    color: var(--white);
+                    background-color: var(--black);
                     padding: 4px;
                     border-radius: 4px;
                     font-size: 12px;
@@ -14,6 +14,7 @@ export default function ToCartButton ({ id }) {
                     height: 100%;
                     width: 100%;
                     text-align: center;
+                    cursor: pointer;
                 }
 		    `} </style>
         </div>

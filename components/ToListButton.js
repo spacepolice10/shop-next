@@ -14,6 +14,7 @@ export default function ToListButton ({ id }) {
                     height: 100%;
                     width: 100%;
                     text-align: center;
+                    cursor:pointer;
                 }
 		    `} </style>
         </div>

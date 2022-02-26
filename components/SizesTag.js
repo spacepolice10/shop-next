@@ -14,11 +14,15 @@ export default function Badge ({ id }) {
             <p>{size}</p>
             <style jsx> {`
                 p {
-                    color: white;
-                    background-color: black;
-                    padding: 4px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: var(--white);
+                    background-color: var(--black);
                     border-radius: 4px;
-                    width: fit-content;
+                    width: 20px;
+                    height: 20px;
+                    padding: 4px;
                     font-size: 12px;
                     font-weight: 800;
                 }
