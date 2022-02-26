@@ -61,9 +61,9 @@ const Badge = sequelize.define('badge', {
     name: {type: DataTypes.STRING, unique: true, allowNull: true}
 })
 
-const Characteristics = sequelize.define('characteristics', {
-    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true}
-})
+// const Characteristics = sequelize.define('characteristics', {
+//     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true}
+// })
 
 User.hasOne(Cart)
 Cart.belongsTo(User)
@@ -101,26 +101,26 @@ Item.belongsTo(Size)
 Badge.hasMany(Item)
 Item.belongsTo(Badge)
 
-Category.belongsToMany(Brand, {through: Characteristics})
-Category.belongsToMany(Size, {through: Characteristics})
-Category.belongsToMany(Color, {through: Characteristics})
-Category.belongsToMany(Badge, {through: Characteristics})
-Brand.belongsToMany(Category, {through: Characteristics})
-Brand.belongsToMany(Size, {through: Characteristics})
-Brand.belongsToMany(Color, {through: Characteristics})
-Brand.belongsToMany(Badge, {through: Characteristics})
-Size.belongsToMany(Category, {through: Characteristics})
-Size.belongsToMany(Brand, {through: Characteristics})
-Size.belongsToMany(Color, {through: Characteristics})
-Size.belongsToMany(Badge, {through: Characteristics})
-Color.belongsToMany(Category, {through: Characteristics})
-Color.belongsToMany(Brand, {through: Characteristics})
-Color.belongsToMany(Size, {through: Characteristics})
-Color.belongsToMany(Badge, {through: Characteristics})
-Badge.belongsToMany(Category, {through: Characteristics})
-Badge.belongsToMany(Brand, {through: Characteristics})
-Badge.belongsToMany(Size, {through: Characteristics})
-Badge.belongsToMany(Color, {through: Characteristics})
+// Category.belongsToMany(Brand, {through: Characteristics})
+// Category.belongsToMany(Size, {through: Characteristics})
+// Category.belongsToMany(Color, {through: Characteristics})
+// Category.belongsToMany(Badge, {through: Characteristics})
+// Brand.belongsToMany(Category, {through: Characteristics})
+// Brand.belongsToMany(Size, {through: Characteristics})
+// Brand.belongsToMany(Color, {through: Characteristics})
+// Brand.belongsToMany(Badge, {through: Characteristics})
+// Size.belongsToMany(Category, {through: Characteristics})
+// Size.belongsToMany(Brand, {through: Characteristics})
+// Size.belongsToMany(Color, {through: Characteristics})
+// Size.belongsToMany(Badge, {through: Characteristics})
+// Color.belongsToMany(Category, {through: Characteristics})
+// Color.belongsToMany(Brand, {through: Characteristics})
+// Color.belongsToMany(Size, {through: Characteristics})
+// Color.belongsToMany(Badge, {through: Characteristics})
+// Badge.belongsToMany(Category, {through: Characteristics})
+// Badge.belongsToMany(Brand, {through: Characteristics})
+// Badge.belongsToMany(Size, {through: Characteristics})
+// Badge.belongsToMany(Color, {through: Characteristics})
 
 module.exports = {
     User,
@@ -135,5 +135,5 @@ module.exports = {
     Size,
     Color,
     Badge,
-    Characteristics
+    // Characteristics
 }

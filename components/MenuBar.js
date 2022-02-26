@@ -41,9 +41,12 @@ const MenuBar = () => {
 					height: 80px;
 				}
 				button {
+					color: var(--white);
 					border: none;
 					background: transparent;
 					cursor: pointer;
+					width: 30px;
+					height: 30px;
 				}
 			`} </style>
 		</div>

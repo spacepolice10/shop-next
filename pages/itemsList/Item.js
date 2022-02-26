@@ -70,7 +70,7 @@ const Item = (props) => {
 					color: #64748b;
 				}
 				.divider {
-					margin: 0px 20px;
+					margin: 0px 10px;
 					height: 1px;
 					background-color: black;
 					opacity: 20%;
