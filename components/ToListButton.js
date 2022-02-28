@@ -2,19 +2,22 @@
 export default function ToListButton ({ id }) {
     return (
         <div>
-            <p>To List</p>
+            To List
             <style jsx> {`
                 div {
-                    color: #62738C;
-                    background-color: white;
+                    color: var(--black);
+                    background-color: var(--white);
                     padding: 4px;
-                    border: 1px solid #62738C;
+                    border: 1px solid var(--black);
                     border-radius: 4px;
                     font-size: 12px;
-                    height: 100%;
+                    font-weight: bold;
+                    height: 48px;
                     width: 100%;
                     text-align: center;
                     cursor:pointer;
+                    line-height: 48px;
+                    vertical-align: middle;
                 }
 		    `} </style>
         </div>

@@ -8,13 +8,13 @@ export default function HomePage ({ items }) {
         testData.blog[0]
     ]
     return (
-        <div>
+        <div className='container'>
             {/* <Banners content={banners} /> */}
             <ItemsList items={clothes} />
             <style jsx>{`
-                div {
-                    width: 85%;
-                }
+                    .container {
+                        width: 100%;
+                    }
             `}</style>
         </div>
     )

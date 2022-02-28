@@ -1,17 +1,24 @@
-import Home from './home/index';
+import { useState } from 'react';
+import HomePage from './home/HomePage';
+// import Blog from './blog/Blog';
 
-const Index = ({ data }) => {
+export default function Home ({ data }) {
+	const [screen, setScreen] = useState(<HomePage items={data} />)
 	return (
-		<div className = 'container'>
-			<h1>Testing</h1>
-			<Home />
-			<style jsx> {`
-				.container {
-					width: 100%;
-				}
-			`} </style> 
-		</div>
+		<>
+			{/* <div>
+				<button onClick={() => setScreen(<HomePage items={data} />)} id="home">New clothes</button>
+				<button onClick={() => setScreen(<Blog />)} id="blog">#stylenotes</button>
+			</div> */}
+			{screen}
+		</>
 	)
 }
 
-export default Index;
+export async function getServerSideProps () {
+	const res = await fetch('http://localhost:5000/api/item')
+	const data = await res.json()
+	return {
+		props: { data }, 
+	}
+}

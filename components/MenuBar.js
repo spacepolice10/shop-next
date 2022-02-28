@@ -12,21 +12,21 @@ const MenuBar = () => {
 						<HomeIcon />
 					</button>
 				</Link>
-				<Link href='/search/'>
-					<button>
+				{/* <Link href='/search/'> */}
+					<button onClick={() => {alert('Does not work at the moment. Sorry :(')}}>
 						<SearchIcon />
 					</button>
-				</Link>
+				{/* </Link> */}
 				<Link href='/lists/'>
 					<button>
 						<HeartIcon />
 					</button>
 				</Link>
-				<Link href='/profile/'>
-					<button>
+				{/* <Link href='/profile/'> */}
+					<button onClick={() => {alert('Does not work at the moment. Sorry :(')}}>
 						<UserIcon />
 					</button>
-				</Link>
+				{/* </Link> */}
 			<style jsx> {`
 				.menu-bar {
 					position: fixed;

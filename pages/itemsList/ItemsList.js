@@ -1,17 +1,22 @@
+import { motion, LayoutGroup} from 'framer-motion'
 import React from 'react';
 import Item from '../itemsList/Item';
 
-const itemsList = ({items}) => {
+const itemsList = ({ items }) => {
 	return (
 		<div className = 'items-list'>
-			{ React.Children.toArray(items.map(item => <Item {...item} />)) }
+			<LayoutGroup>
+				{ React.Children.toArray(items.map(item => <Item {...item} />)) }
+			</LayoutGroup>
 		<style jsx> {`
 			.items-list {
 				display: grid;
 				grid-template-columns: repeat(1, 2fr);
 				gap: 40px;
 				width: 100%;
+				justify-items: center;
 				margin: 50px 0px 100px 0px;
+				overflow: hidden;
 			}
 			@media (min-width: 668px) {
 				.items-list {
